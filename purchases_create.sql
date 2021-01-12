@@ -7,3 +7,8 @@ CREATE TABLE closet.purchases (
     thrifted         boolean
 );
 -- create table purchases for purchase information
+
+alter table closet.purchases 
+add column 
+sale boolean;
+-- add in a sale column 
