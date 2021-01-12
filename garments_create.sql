@@ -10,3 +10,9 @@ CREATE TABLE closet.garments (
     season_storage   boolean
 );
 -- create the table garments with garment information
+
+
+alter table closet.garments
+add column 
+item_description varchar(500);
+-- add a description column 
