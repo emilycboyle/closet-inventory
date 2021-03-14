@@ -19,3 +19,12 @@ from closet.purchases
 group by purchase_month
 order by purchase_month desc;
 -- check purchase per month
+
+select count(p.garment_id) as garments, 
+       p.purchased_from,
+       date_trunc('month', p.purchase_date) as purchase_month
+from closet.purchases p 
+group by p.purchased_from,
+         purchase_month
+order by purchase_month desc;
+-- no. garments per month, from each purchase location
