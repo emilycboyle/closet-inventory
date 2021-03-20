@@ -28,3 +28,9 @@ group by p.purchased_from,
          purchase_month
 order by purchase_month desc;
 -- no. garments per month, from each purchase location
+
+select sum(p.price) as total_spend, p.purchased_from
+from closet.purchases p 
+group by p.purchased_from 
+order by total_spend desc;
+-- total spend per purchase location
